@@ -14,6 +14,10 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    func setViewTitleMode(isLarge: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = isLarge
+    }
 }
 
 // MARK: - Conforming to BaseInteractorToPresenter
@@ -25,7 +29,7 @@ extension BaseViewController {
 
     func showLoadingView() {
         loadingView = LoadingViewController()
-        loadingView!.modalPresentationStyle = .overFullScreen
+        loadingView!.modalPresentationStyle = .overCurrentContext
         loadingView!.modalTransitionStyle = .crossDissolve
         present(loadingView!, animated: true)
         loadingView!.startAnimating()

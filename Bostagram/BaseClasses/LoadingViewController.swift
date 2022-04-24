@@ -18,7 +18,7 @@ class LoadingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
+        view.backgroundColor = .gray.withAlphaComponent(0.4)
         activityView.center = view.center
         view.addSubview(activityView)
     }

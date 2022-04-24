@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		522F775D281543BC000C2F5C /* UserProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F775C281543BC000C2F5C /* UserProfileNavigator.swift */; };
 		52955BB92814BBCB002028E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BB82814BBCB002028E0 /* AppDelegate.swift */; };
 		52955BBB2814BBCB002028E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BBA2814BBCB002028E0 /* SceneDelegate.swift */; };
 		52955BC22814BBCE002028E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52955BC12814BBCE002028E0 /* Assets.xcassets */; };
@@ -31,9 +32,14 @@
 		52955C012814EC80002028E0 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955C002814EC80002028E0 /* LoadingViewController.swift */; };
 		52955C032814EC95002028E0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955C022814EC95002028E0 /* BaseViewController.swift */; };
 		52955C062814EDAD002028E0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52955C082814EDAD002028E0 /* Localizable.strings */; };
+		52955C0B2814F172002028E0 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 52955C0A2814F172002028E0 /* RxCocoa */; };
+		52955C0D2814F172002028E0 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 52955C0C2814F172002028E0 /* RxSwift */; };
+		52955C0F2814FF81002028E0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955C0E2814FF81002028E0 /* UserRepository.swift */; };
+		52955C11281500A3002028E0 /* UserProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955C10281500A3002028E0 /* UserProfileUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		522F775C281543BC000C2F5C /* UserProfileNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileNavigator.swift; sourceTree = "<group>"; };
 		52955BB52814BBCB002028E0 /* Bostagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bostagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52955BB82814BBCB002028E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52955BBA2814BBCB002028E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,8 @@
 		52955C002814EC80002028E0 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		52955C022814EC95002028E0 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		52955C072814EDAD002028E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		52955C0E2814FF81002028E0 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		52955C10281500A3002028E0 /* UserProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52955C0D2814F172002028E0 /* RxSwift in Frameworks */,
+				52955C0B2814F172002028E0 /* RxCocoa in Frameworks */,
 				52955BD72814C0B5002028E0 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		522F775B281543AB000C2F5C /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				522F775C281543BC000C2F5C /* UserProfileNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		52955BAC2814BBCB002028E0 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +173,7 @@
 		52955BD22814BC91002028E0 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				52955C0E2814FF81002028E0 /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -190,6 +209,8 @@
 		52955BEC2814E363002028E0 /* UserProfile */ = {
 			isa = PBXGroup;
 			children = (
+				522F775B281543AB000C2F5C /* Navigator */,
+				52955C1228150289002028E0 /* UseCase */,
 				52955BF12814E3B9002028E0 /* View */,
 				52955BF22814E3BF002028E0 /* ViewModel */,
 			);
@@ -240,6 +261,14 @@
 			path = BaseClasses;
 			sourceTree = "<group>";
 		};
+		52955C1228150289002028E0 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				52955C10281500A3002028E0 /* UserProfileUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,6 +287,8 @@
 			name = Bostagram;
 			packageProductDependencies = (
 				52955BD62814C0B5002028E0 /* Moya */,
+				52955C0A2814F172002028E0 /* RxCocoa */,
+				52955C0C2814F172002028E0 /* RxSwift */,
 			);
 			productName = Bostagram;
 			productReference = 52955BB52814BBCB002028E0 /* Bostagram.app */;
@@ -289,6 +320,7 @@
 			mainGroup = 52955BAC2814BBCB002028E0;
 			packageReferences = (
 				52955BD52814C0B5002028E0 /* XCRemoteSwiftPackageReference "Moya" */,
+				52955C092814F172002028E0 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 52955BB62814BBCB002028E0 /* Products */;
 			projectDirPath = "";
@@ -323,6 +355,7 @@
 				52955BB92814BBCB002028E0 /* AppDelegate.swift in Sources */,
 				52955C012814EC80002028E0 /* LoadingViewController.swift in Sources */,
 				52955BDD2814C80A002028E0 /* NetworkConstants.swift in Sources */,
+				52955C11281500A3002028E0 /* UserProfileUseCase.swift in Sources */,
 				52955BFD2814EA93002028E0 /* UIViewController+Extension.swift in Sources */,
 				52955C032814EC95002028E0 /* BaseViewController.swift in Sources */,
 				52955BE92814D7ED002028E0 /* Photo.swift in Sources */,
@@ -335,7 +368,9 @@
 				52955BBB2814BBCB002028E0 /* SceneDelegate.swift in Sources */,
 				52955BFF2814EB61002028E0 /* ApplicationFlow.swift in Sources */,
 				52955BDB2814C726002028E0 /* UserRouter.swift in Sources */,
+				522F775D281543BC000C2F5C /* UserProfileNavigator.swift in Sources */,
 				52955BEE2814E3AB002028E0 /* UserProfileViewController.swift in Sources */,
+				52955C0F2814FF81002028E0 /* UserRepository.swift in Sources */,
 				52955BE22814CBB7002028E0 /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +601,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		52955C092814F172002028E0 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -573,6 +616,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 52955BD52814C0B5002028E0 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		52955C0A2814F172002028E0 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52955C092814F172002028E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		52955C0C2814F172002028E0 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52955C092814F172002028E0 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

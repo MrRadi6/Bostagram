@@ -16,8 +16,9 @@ class ApplicationFlow {
     private init() { }
 
     func launchApp() {
-        let userProfileView = UserProfileViewController.instantiate(from: .UserProfile)
-        setRootView(userProfileView)
+        let userProfileView = UserProfileNavigator.createModule()
+        let rootViewController = UINavigationController(rootViewController: userProfileView)
+        setRootView(rootViewController)
     }
 
     private func setRootView(_ viewController: UIViewController) {
