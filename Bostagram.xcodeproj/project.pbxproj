@@ -14,6 +14,15 @@
 		52955BC22814BBCE002028E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52955BC12814BBCE002028E0 /* Assets.xcassets */; };
 		52955BC52814BBCE002028E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52955BC32814BBCE002028E0 /* LaunchScreen.storyboard */; };
 		52955BD42814BCEF002028E0 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52955BD32814BCEF002028E0 /* Colors.xcassets */; };
+		52955BD72814C0B5002028E0 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 52955BD62814C0B5002028E0 /* Moya */; };
+		52955BDB2814C726002028E0 /* UserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BDA2814C726002028E0 /* UserRouter.swift */; };
+		52955BDD2814C80A002028E0 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BDC2814C80A002028E0 /* NetworkConstants.swift */; };
+		52955BE02814C9B4002028E0 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BDF2814C9B4002028E0 /* BaseRouter.swift */; };
+		52955BE22814CBB7002028E0 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BE12814CBB7002028E0 /* UserAPI.swift */; };
+		52955BE52814D649002028E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BE42814D649002028E0 /* User.swift */; };
+		52955BE72814D793002028E0 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BE62814D793002028E0 /* Album.swift */; };
+		52955BE92814D7ED002028E0 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BE82814D7ED002028E0 /* Photo.swift */; };
+		52955BEB2814DF6D002028E0 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52955BEA2814DF6D002028E0 /* BaseAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,14 @@
 		52955BC42814BBCE002028E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52955BC62814BBCE002028E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52955BD32814BCEF002028E0 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		52955BDA2814C726002028E0 /* UserRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRouter.swift; sourceTree = "<group>"; };
+		52955BDC2814C80A002028E0 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		52955BDF2814C9B4002028E0 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		52955BE12814CBB7002028E0 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		52955BE42814D649002028E0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52955BE62814D793002028E0 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		52955BE82814D7ED002028E0 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		52955BEA2814DF6D002028E0 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52955BD72814C0B5002028E0 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				52955BCC2814BBDF002028E0 /* AppDelegates */,
+				52955BE32814D57A002028E0 /* Entities */,
 				52955BCD2814BBEA002028E0 /* Modules */,
 				52955BD02814BC83002028E0 /* Data */,
 				52955BCE2814BBF8002028E0 /* Resources */,
@@ -107,6 +126,9 @@
 		52955BD12814BC8B002028E0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				52955BD82814C70E002028E0 /* Routers */,
+				52955BD92814C716002028E0 /* APIs */,
+				52955BDC2814C80A002028E0 /* NetworkConstants.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -116,6 +138,34 @@
 			children = (
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		52955BD82814C70E002028E0 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				52955BDA2814C726002028E0 /* UserRouter.swift */,
+				52955BDF2814C9B4002028E0 /* BaseRouter.swift */,
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		52955BD92814C716002028E0 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				52955BE12814CBB7002028E0 /* UserAPI.swift */,
+				52955BEA2814DF6D002028E0 /* BaseAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		52955BE32814D57A002028E0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				52955BE42814D649002028E0 /* User.swift */,
+				52955BE62814D793002028E0 /* Album.swift */,
+				52955BE82814D7ED002028E0 /* Photo.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,6 +184,9 @@
 			dependencies = (
 			);
 			name = Bostagram;
+			packageProductDependencies = (
+				52955BD62814C0B5002028E0 /* Moya */,
+			);
 			productName = Bostagram;
 			productReference = 52955BB52814BBCB002028E0 /* Bostagram.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +215,9 @@
 				Base,
 			);
 			mainGroup = 52955BAC2814BBCB002028E0;
+			packageReferences = (
+				52955BD52814C0B5002028E0 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 52955BB62814BBCB002028E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -191,8 +247,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				52955BBD2814BBCB002028E0 /* ViewController.swift in Sources */,
+				52955BE02814C9B4002028E0 /* BaseRouter.swift in Sources */,
 				52955BB92814BBCB002028E0 /* AppDelegate.swift in Sources */,
+				52955BDD2814C80A002028E0 /* NetworkConstants.swift in Sources */,
+				52955BE92814D7ED002028E0 /* Photo.swift in Sources */,
+				52955BE52814D649002028E0 /* User.swift in Sources */,
+				52955BEB2814DF6D002028E0 /* BaseAPI.swift in Sources */,
+				52955BE72814D793002028E0 /* Album.swift in Sources */,
 				52955BBB2814BBCB002028E0 /* SceneDelegate.swift in Sources */,
+				52955BDB2814C726002028E0 /* UserRouter.swift in Sources */,
+				52955BE22814CBB7002028E0 /* UserAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +409,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -374,6 +439,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -412,6 +478,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		52955BD52814C0B5002028E0 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		52955BD62814C0B5002028E0 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 52955BD52814C0B5002028E0 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 52955BAD2814BBCB002028E0 /* Project object */;
 }
