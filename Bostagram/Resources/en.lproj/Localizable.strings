@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Bostagram
+
+  Created by Samir on 4/24/22.
+  
+*/
+
+// MARK: - Global
+"global_cancel_title" = "cancel";

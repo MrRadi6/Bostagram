@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserProfileViewController.swift
 //  Bostagram
 //
 //  Created by Samir on 4/24/22.
@@ -7,11 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("global_cancel_title".localized())
     }
 }
-

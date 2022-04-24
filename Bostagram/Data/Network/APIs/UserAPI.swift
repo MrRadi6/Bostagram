@@ -8,9 +8,18 @@
 import Foundation
 import Moya
 
+protocol UserAPIProtocol {
+    func users(completion: @escaping (Result<[User], Error>) -> Void)
+    func albums(userID: Int, completion: @escaping (Result<[Album], Error>) -> Void)
+    func photos(albumID: Int, completion: @escaping (Result<[Photo], Error>) -> Void)
+}
+
 struct UserAPI: BaseAPI {
     typealias router = UserRouter
+}
 
+// MARK: - Conforming to UserAPIProtocol
+extension UserAPI: UserAPIProtocol {
     func users(completion: @escaping (Result<[User], Error>) -> Void) {
         makeRequest(target: .users) { (result: Result<[User], Error>) in
             switch result {
