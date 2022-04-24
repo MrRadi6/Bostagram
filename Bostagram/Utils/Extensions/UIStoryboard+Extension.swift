@@ -6,25 +6,11 @@
 //
 import UIKit
 
-protocol StoryboardInstantiable {
-    static var storyboardIdentifier: String { get }
-}
-
-extension StoryboardInstantiable where Self: UIViewController {
-
-    static var storyboardIdentifier: String {
-        return String(describing: self)
-    }
-
-    static func instantiate(from storyboard: UIStoryboard.Storyboard) -> Self {
-        return UIStoryboard(storyboard: storyboard).instantiateViewController()
-    }
-}
-
 extension UIStoryboard {
 
     enum Storyboard: String {
         case UserProfile
+        case AlbumDetails
 
         var fileName: String {
             return rawValue

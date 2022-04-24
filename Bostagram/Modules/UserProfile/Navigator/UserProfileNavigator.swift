@@ -28,6 +28,7 @@ class UserProfileNavigator: UserProfileNavigatorProtocol {
     }
 
     func openAlbum(_ album: Album) {
-        print(album)
+        let albumDetailsView = AlbumDetailsNavigator.createModule(with: album)
+        viewController?.show(albumDetailsView, sender: nil)
     }
 }

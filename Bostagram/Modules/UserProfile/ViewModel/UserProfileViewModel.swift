@@ -9,7 +9,14 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct UserProfileViewModel {
+protocol UserProfileViewModelProtocol {
+    var viewDidLoad: PublishSubject<Void> { get }
+    var selectAlbum: PublishSubject<Int> { get }
+    var user: PublishSubject<User> { get }
+    var albums: PublishSubject<[Album]> { get }
+}
+
+struct UserProfileViewModel: UserProfileViewModelProtocol {
 
     private let useCase: UserProfileUseCaseProtocol
     private let navigator: UserProfileNavigatorProtocol

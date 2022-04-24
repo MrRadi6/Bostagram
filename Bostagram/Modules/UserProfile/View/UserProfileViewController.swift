@@ -18,7 +18,7 @@ class UserProfileViewController: BaseViewController {
 
     private let disposeBag = DisposeBag()
 
-    var viewModel: UserProfileViewModel!
+    var viewModel: UserProfileViewModelProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()

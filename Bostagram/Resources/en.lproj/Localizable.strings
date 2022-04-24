@@ -12,3 +12,6 @@
 // MARK: - User Profile
 "userProfile_title" = "Profile";
 "userProfile_my_album_title" = "My Albums";
+
+// MARK: - Album Details
+"albumDetails_search_placeholder" = "Search in Images...";
