@@ -62,6 +62,11 @@ class UserProfileViewController: BaseViewController {
     }
 
     private func bindAlbumsTableView() {
+        setupCellForItems()
+        setupTableViewSelectItem()
+    }
+
+    private func setupCellForItems() {
         viewModel.albums
             .do(afterCompleted: { [weak self] in
                 self?.hideLoadingView(completion: {})
@@ -72,7 +77,9 @@ class UserProfileViewController: BaseViewController {
                 cell.textLabel?.numberOfLines = 0
                 cell.selectionStyle = .none
             }.disposed(by: disposeBag)
+    }
 
+    private func setupTableViewSelectItem() {
         albumsTableView.rx.itemSelected
             .map({ $0.row })
             .bind(to: viewModel.selectAlbum)
