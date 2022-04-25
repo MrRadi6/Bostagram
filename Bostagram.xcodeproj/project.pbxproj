@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5202109A28160F47001606FD /* AlbumPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202109928160F47001606FD /* AlbumPhotoViewController.swift */; };
+		5202109C28160F53001606FD /* AlbumPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5202109B28160F53001606FD /* AlbumPhoto.storyboard */; };
+		5202109E2816176A001606FD /* AlbumPhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202109D2816176A001606FD /* AlbumPhotoViewModel.swift */; };
+		520210A028161797001606FD /* AlbumPhotoNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202109F28161797001606FD /* AlbumPhotoNavigator.swift */; };
 		522F775D281543BC000C2F5C /* UserProfileNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F775C281543BC000C2F5C /* UserProfileNavigator.swift */; };
 		522F77652815477B000C2F5C /* AlbumDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F77642815477B000C2F5C /* AlbumDetailsViewController.swift */; };
 		522F776728154784000C2F5C /* AlbumDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522F776628154784000C2F5C /* AlbumDetails.storyboard */; };
@@ -47,6 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5202109928160F47001606FD /* AlbumPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumPhotoViewController.swift; path = Bostagram/Modules/AlbumPhoto/AlbumPhotoViewController.swift; sourceTree = SOURCE_ROOT; };
+		5202109B28160F53001606FD /* AlbumPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumPhoto.storyboard; sourceTree = "<group>"; };
+		5202109D2816176A001606FD /* AlbumPhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoViewModel.swift; sourceTree = "<group>"; };
+		5202109F28161797001606FD /* AlbumPhotoNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumPhotoNavigator.swift; sourceTree = "<group>"; };
 		522F775C281543BC000C2F5C /* UserProfileNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileNavigator.swift; sourceTree = "<group>"; };
 		522F77642815477B000C2F5C /* AlbumDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsViewController.swift; sourceTree = "<group>"; };
 		522F776628154784000C2F5C /* AlbumDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlbumDetails.storyboard; sourceTree = "<group>"; };
@@ -99,6 +107,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5202109328160EE2001606FD /* AlbumPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				5202109728160F12001606FD /* Navigator */,
+				5202109528160F07001606FD /* View */,
+				5202109428160F03001606FD /* ViewMode */,
+			);
+			path = AlbumPhoto;
+			sourceTree = "<group>";
+		};
+		5202109428160F03001606FD /* ViewMode */ = {
+			isa = PBXGroup;
+			children = (
+				5202109D2816176A001606FD /* AlbumPhotoViewModel.swift */,
+			);
+			path = ViewMode;
+			sourceTree = "<group>";
+		};
+		5202109528160F07001606FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5202109928160F47001606FD /* AlbumPhotoViewController.swift */,
+				5202109B28160F53001606FD /* AlbumPhoto.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5202109728160F12001606FD /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				5202109F28161797001606FD /* AlbumPhotoNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
 		522F775B281543AB000C2F5C /* Navigator */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +250,7 @@
 			children = (
 				52955BEC2814E363002028E0 /* UserProfile */,
 				522F775E281545E4000C2F5C /* UserAlbums */,
+				5202109328160EE2001606FD /* AlbumPhoto */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -411,6 +455,7 @@
 			files = (
 				52955C062814EDAD002028E0 /* Localizable.strings in Resources */,
 				52955BC52814BBCE002028E0 /* LaunchScreen.storyboard in Resources */,
+				5202109C28160F53001606FD /* AlbumPhoto.storyboard in Resources */,
 				52955BF02814E3B5002028E0 /* UserProfile.storyboard in Resources */,
 				52955BD42814BCEF002028E0 /* Colors.xcassets in Resources */,
 				52955BC22814BBCE002028E0 /* Assets.xcassets in Resources */,
@@ -427,6 +472,7 @@
 			files = (
 				522F776F28154A99000C2F5C /* AlbumDetailsNavigator.swift in Sources */,
 				52955BE02814C9B4002028E0 /* BaseRouter.swift in Sources */,
+				520210A028161797001606FD /* AlbumPhotoNavigator.swift in Sources */,
 				52955BB92814BBCB002028E0 /* AppDelegate.swift in Sources */,
 				52955C012814EC80002028E0 /* LoadingViewController.swift in Sources */,
 				52955BDD2814C80A002028E0 /* NetworkConstants.swift in Sources */,
@@ -446,12 +492,14 @@
 				52955BE72814D793002028E0 /* Album.swift in Sources */,
 				52955BBB2814BBCB002028E0 /* SceneDelegate.swift in Sources */,
 				52955BFF2814EB61002028E0 /* ApplicationFlow.swift in Sources */,
+				5202109E2816176A001606FD /* AlbumPhotoViewModel.swift in Sources */,
 				52955BDB2814C726002028E0 /* UserRouter.swift in Sources */,
 				522F775D281543BC000C2F5C /* UserProfileNavigator.swift in Sources */,
 				522F776B28154895000C2F5C /* AlbumDetailsUseCase.swift in Sources */,
 				52955BEE2814E3AB002028E0 /* UserProfileViewController.swift in Sources */,
 				52955C0F2814FF81002028E0 /* UserRepository.swift in Sources */,
 				52955BE22814CBB7002028E0 /* UserAPI.swift in Sources */,
+				5202109A28160F47001606FD /* AlbumPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

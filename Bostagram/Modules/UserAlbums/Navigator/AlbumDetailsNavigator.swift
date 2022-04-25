@@ -29,6 +29,7 @@ class AlbumDetailsNavigator: AlbumDetailsNavigatorProtocol {
     }
 
     func openPhoto(_ photo: Photo) {
-        print(photo)
+        let albumPhotoView = AlbumPhotoNavigator.createModule(photo: photo)
+        viewController?.show(albumPhotoView, sender: nil)
     }
 }

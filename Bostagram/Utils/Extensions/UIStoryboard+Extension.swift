@@ -11,6 +11,7 @@ extension UIStoryboard {
     enum Storyboard: String {
         case UserProfile
         case AlbumDetails
+        case AlbumPhoto
 
         var fileName: String {
             return rawValue
