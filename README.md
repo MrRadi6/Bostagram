@@ -1,5 +1,5 @@
 # Bostagram
-Bosta Technical Task
+An iOS application utilizing RXSwift with MVVM 
 
 ## Installation
 
